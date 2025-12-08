@@ -173,10 +173,9 @@ export default function Portfolio() {
     <>
       <div className="w-full p-4 bg-white rounded-xl shadow-md">
         <section className="mt-10">
-          <h3 className="text-2xl font-semibold">Selected Projects</h3>
+          <h3 className="text-2xl font-semibold">Portfolio</h3>
           <p className="mt-2 text-slate-600">
-            A few projects I've worked on — full-stack apps & UI.
-          </p>
+           Here are some of the projects I've worked on.</p>
 
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
             {projects.map((p, index) => (
