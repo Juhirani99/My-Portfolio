@@ -496,12 +496,7 @@ export default function Portfolio() {
               {/* <span>8 cgpa</span> */}
               </div>
               </div>
-              {/* <div className="p-3 border-l-4 border-violet-300 bg-gray-50 rounded-r-lg hover:border-violet-500 hover:bg-violet-50 transition-all">
-                <div className="font-medium text-gray-800">MERN stack web development</div>
-                <div className="flex justify-between text-sm text-gray-600 mt-1"><span>2020-21</span>
-                <span>Grade A</span>
-                </div>
-                </div> */}
+
                 <div className="p-3 border-l-4 border-violet-300 bg-gray-50 rounded-r-lg hover:border-violet-500 hover:bg-violet-50 transition-all">
                   <div className="font-medium text-gray-800">BCA</div>
                   <div className="flex justify-between text-sm text-gray-600 mt-1">
@@ -509,13 +504,7 @@ export default function Portfolio() {
                     {/* <span>65%</span> */}
                     </div>
                     </div>
-                    {/* <div className="p-3 border-l-4 border-violet-300 bg-gray-50 rounded-r-lg hover:border-violet-500 hover:bg-violet-50 transition-all">
-                      <div className="font-medium text-gray-800">10th, P.G. Senior Secondary School</div>
-                      <div className="flex justify-between text-sm text-gray-600 mt-1">
-                        <span>2017-18</span>
-                        <span>60%</span>
-                        </div>
-                        </div> */}
+                    
                         </div>
                         </div>
   
