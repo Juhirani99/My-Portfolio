@@ -100,13 +100,13 @@ export default function Portfolio() {
     const interval = setInterval(() => {
       scrollRefs.current.forEach((div) => {
         if (div) {
-          div.scrollTop += 100; // scrolling speed
+          div.scrollTop += 10; // scrolling speed
           if (div.scrollTop >= div.scrollHeight - div.clientHeight) {
-            div.scrollTop = 100; // reset scroll
+            div.scrollTop = 80; // reset scroll
           }
         }
       });
-    }, 1000); // <-- 1 second interval
+    }, 50); // <-- 1 second interval
 
     return () => clearInterval(interval);
   }, []);
@@ -197,7 +197,7 @@ export default function Portfolio() {
                       alt={p.title}
                       className="w-full h-full object-contain"
                       style={{
-                        minWidth: "50%",
+                        minWidth: "10%",
                         minHeight: "1000%",
                         display: "block",
                       }}
@@ -572,72 +572,76 @@ export default function Portfolio() {
 
       {/* MAIN */}
       {/* <div className="flex gap-6 p-6 pt-24 max-w-7xl mx-auto"> */}
-           <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat flex gap-6 p-15 pt-24 max-w-7xl mx-auto"
-      style={{ backgroundImage: `url(/bg.jpg)` }}
-    >
-       
+      <div
+  className="min-h-screen bg-cover bg-center bg-no-repeat  flex gap-6 px-4 md:px-10 p-15 pt-24 flex flex-col md:flex-row gap-6 max-w-7xl mx-auto"
+  style={{ backgroundImage: `url(/bg.jpg)` }}
+>
 
-        {/* LEFT PROFILE CARD */}
-        
-       
- {/* LEFT PROFILE CARD (Responsive) */}
-<div className="w-full md:w-1/4">
 
-  {/* Sticky only on desktop */}
-  <div className="md:sticky md:top-4">
+  {/* LEFT PROFILE CARD */}
+  <div className="w-full md:w-1/4 lg:w-1/4">
 
-    {/* Card */}
-    <div className="bg-white p-6 rounded-xl shadow-md max-w-sm mx-auto md:mx-0">
+    {/* Sticky only on desktop */}
+    <div className="md:sticky md:top-4">
 
-      <Image
-        src="/profile.png"
-        alt="Profile"
-        width={150}
-        height={150}
-        className="rounded-xl mx-auto mb-4"
-      />
+      {/* Card */}
+      <div className="bg-white p-6 rounded-xl shadow-md w-full max-w-sm mx-auto md:mx-0">
 
-      <h2 className="text-xl font-semibold text-center">Juhi Rani</h2>
-      <p className="text-gray-600 text-center">Full Stack Developer</p>
+        <Image
+          src="/profile.png"
+          alt="Profile"
+          width={150}
+          height={150}
+          className="rounded-xl mx-auto mb-4"
+        />
 
-      <div className="mt-6 space-y-3 text-gray-700">
-        <div className="flex items-center gap-2">
-          <span>📞</span> <span>+91 7766043850</span>
+        <h2 className="text-xl font-semibold text-center">Juhi Rani</h2>
+        <p className="text-gray-600 text-center">Full Stack Developer</p>
+
+        {/* Contact Section */}
+        <div className="mt-6 space-y-3 text-gray-700">
+
+          <div className="flex items-center gap-2">
+            <span>📞</span> <span>+91 7766043850</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span>✉️</span> <span>juhitechsunset@gmail.com</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span>📍</span> <span>Bihar | India</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span>🎂</span> <span>Apr 6, 1999</span>
+          </div>
+
         </div>
 
-        <div className="flex items-center gap-2">
-          <span>✉️</span> <span>juhitechsunset@gmail.com</span>
+        {/* Resume Button */}
+        <div className="mt-5 flex justify-center">
+          <a
+            href="/Juhi-Rani_Resume.pdf"
+            download
+            className="px-4 py-2 bg-black text-white rounded-lg shadow hover:bg-blue-800 transition"
+          >
+            Download Resume
+          </a>
         </div>
 
-        <div className="flex items-center gap-2">
-          <span>📍</span> <span>Bihar | India</span>
-        </div>
-
-        <div className="flex items-center gap-2">
-          <span>🎂</span> <span>Apr 6, 1999</span>
-        </div>
       </div>
-
-      <div className="mt-5 flex justify-center">
-        <a
-          href="/Juhi-Rani_Resume.pdf"
-          download
-          className="px-4 py-2 bg-black text-white rounded-lg shadow hover:bg-blue-800 transition"
-        >
-          Download Resume
-        </a>
-      </div>
-
     </div>
   </div>
-</div>
-        
+
+  {/* RIGHT CONTENT */}
+  <div className="w-full md:w-3/4 lg:w-3/4">
+    {renderPage()}
+  </div>
 
 
-        {/* RIGHT CONTENT */}
-        <div className="w-full md:w-3/4">{renderPage()}</div>
-         <a
+
+    <a
               href="https://wa.me/7766043850?text=hi sir"
               target="_blank"
               rel="noopener noreferrer"
